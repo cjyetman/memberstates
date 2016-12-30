@@ -33,14 +33,13 @@ https://github.com/cjyetman/memberstates/issues
   memberstates$nato$iso3c
   memberstates$eu$country.name
 
-  df <- read.csv('http://data.okfn.org/data/core/country-codes/r/country-codes.csv')
-  df$Capital[df$ISO3166.1.Alpha.2 \%in\% memberstates$eu$iso2c]
-
+  # subestting a data frame (using base R)
   url <- 'https://raw.githubusercontent.com/datasets/gdp/master/data/gdp.csv'
   df <- read.csv(url)
   df <- df[df$Year == max(df$Year), ]
   df[df$Country.Code \%in\% memberstates$eu$iso3c, ]
 
+  # subestting a data frame (using dplyr)
   library(dplyr)
   url <- 'https://raw.githubusercontent.com/datasets/gdp/master/data/gdp.csv'
   read.csv(url) \%>\%
