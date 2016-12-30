@@ -1,0 +1,17 @@
+Package: memberstates
+Title: List of member states of various international organizations
+Version: 0.0.0.9000
+Authors@R: person("CJ", "Yetman", email = "cj@cjyetman.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.1.0)
+Suggests: 
+    countrycode,
+    rvest,
+    xml2
+URL: http://github.com/cjyetman/memberstates
+BugReports: https://github.com/cjyetman/memberstates/issues
+RoxygenNote: 5.0.1
