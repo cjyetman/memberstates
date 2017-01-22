@@ -39,12 +39,14 @@ https://github.com/cjyetman/memberstates/issues
   df <- df[df$Year == max(df$Year), ]
   df[df$Country.Code \%in\% memberstates$eu$iso3c, ]
 
+  \dontrun{
   # subestting a data frame (using dplyr)
   library(dplyr)
   url <- 'https://raw.githubusercontent.com/datasets/gdp/master/data/gdp.csv'
   read.csv(url) \%>\%
     filter(Year == max(Year)) \%>\%
     filter(Country.Code \%in\% memberstates$eu$iso3c)
+  }
 }
 \keyword{datasets}
 
