@@ -10,7 +10,7 @@ includes:
 - North Atlantic Treaty Organization (source: http://www.nato.int/cps/en/natolive/nato_countries.htm)
 - Organisation for Economic Co-operation and Development (source: http://www.oecd.org/about/membersandpartners/list-oecd-member-countries.htm)
 
-also includes regional groupings:
+also includes official groupings by various organizations:
 - UN Regional Groups: African Group, Asia-Pacific Group, Eastern European Group, Latin American and Caribbean Group (GRULAC), and Western European and Others Group (WEOG) (source: http://www.un.org/depts/DGACM/RegionalGroups.shtml)
 - WB Region: Latin America & Caribbean, South Asia, Sub-Saharan Africa, Europe & Central Asia, Middle East & North Africa, East Asia & Pacific, and North America (source: http://api.worldbank.org/en/countries/?format=json&per_page=2000)
 - WB Admin Region: South Asia, Sub-Saharan Africa (excluding high income), Europe & Central Asia (excluding high income), Latin America & Caribbean (excluding high income), East Asia & Pacific (excluding high income), and Middle East & North Africa (excluding high income) (source: http://api.worldbank.org/en/countries/?format=json&per_page=2000)
