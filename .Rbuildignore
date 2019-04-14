@@ -1,3 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^memberstates\.Rcheck$
+^memberstates.*\.tar\.gz$
+^memberstates.*\.tgz$
