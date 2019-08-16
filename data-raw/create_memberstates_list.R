@@ -25,7 +25,10 @@ memberstates_name <- c(memberstates_name, coe = list(coe))
 # NATO
 dataurl <- 'http://www.nato.int/cps/en/natolive/nato_countries.htm'
 xmldoc <- read_html(dataurl)
-members <- html_text(html_nodes(xmldoc, '#countries ul li:first-child'), trim = T)
+nodes <- html_nodes(xmldoc, '#countries ul li:first-child')
+xml_find_all(nodes, ".//br") %>% xml_add_sibling("p", "\n")
+xml_find_all(nodes, ".//br") %>% xml_remove()
+members <- sub('\\n.*$', '', html_text(nodes))
 nato <- countrycode(members, 'country.name', 'country.name')
 attr(nato, 'source') <- dataurl
 attr(nato, 'retrieved') <- Sys.time()
