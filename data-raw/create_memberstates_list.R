@@ -7,7 +7,7 @@ memberstates_name <- list()
 # OECD
 dataurl <- 'http://www.oecd.org/about/membersandpartners/list-oecd-member-countries.htm'
 xmldoc <- read_html(dataurl)
-members <- html_text(html_nodes(xmldoc, css = 'td+ td a'), trim = T)
+members <- html_text(html_nodes(html_nodes(xmldoc, css = 'div.country-list__box')[1], css = '.country-list__country'), trim = T)[-1]
 oecd <- countrycode(members, 'country.name', 'country.name')
 attr(oecd, 'source') <- dataurl
 attr(oecd, 'retrieved') <- Sys.time()
