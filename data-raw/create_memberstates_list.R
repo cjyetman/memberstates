@@ -37,7 +37,7 @@ memberstates_name <- c(memberstates_name, nato = list(nato))
 # European Union
 dataurl <- 'https://europa.eu/european-union/about-eu/countries_en'
 xmldoc <- read_html(dataurl)
-members <- html_text(html_nodes(xmldoc, '#sub-section-1 a'), trim = T)
+members <- html_text(html_nodes(xmldoc, '#year-entry2 a'), trim = T)
 eu <- countrycode(members, 'country.name', 'country.name')
 attr(eu, 'source') <- dataurl
 attr(eu, 'retrieved') <- Sys.time()
