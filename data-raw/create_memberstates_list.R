@@ -61,6 +61,7 @@ addcodelists <- function(cntryvect) {
   }
   else {
     newlist <- setNames(lapply(codesToInclude, function(dest) assign(dest, countrycode(cntryvect, 'country.name', dest))), codesToInclude)
+    newlist <- lapply(newlist, function(l) { l <- na.omit(l); attributes(l)$na.action <- NULL; l })
     attr(newlist, 'source') <- attr(cntryvect, 'source')
     attr(newlist, 'retrieved') <- attr(cntryvect, 'retrieved')
     return(newlist)
